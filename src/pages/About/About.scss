@@ -1,0 +1,56 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 1rem;
+
+    .about-text {
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .about-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        color: var(--light-color);
+      }
+
+      .paragraph {
+        text-align: justify;
+        line-height: 1.7rem;
+      }
+    }
+  }
+
+  .curriculum {
+    width: 100%;
+    text-align: right;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--light-color);
+      transition: all 0.4s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .curriculum {
+      text-align: center;
+    }
+  }
+}

@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --background-color: #0d0d0d;
+  --grey-color: #c8c6c6;
+  --light-color: #ffffff;
+  --hover-color: #ff6363;
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   background-color: #0d0d0d;
-  color: #fff;
-}
-ul {
-  list-style: none;
+  color: #c8c6c6;
 }

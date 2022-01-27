@@ -3,15 +3,33 @@
   height: 100px;
   display: flex;
   align-items: center;
+  top: 0;
+  left: 0;
 
   display: flex;
   justify-content: space-evenly;
 
   font-size: 1.1rem;
 
+  .logo-navbar {
+    img {
+      width: 24px;
+      cursor: pointer;
+    }
+  }
+
   ul {
     display: flex;
     gap: 1rem;
+
+    .header-link {
+      color: var(--light-color);
+
+      &:hover {
+        color: var(--hover-color);
+        cursor: pointer;
+      }
+    }
   }
 
   .menu-link {
