@@ -4,6 +4,9 @@ import Header from '../../components/Header/Header';
 import './About.scss';
 
 const About = () => {
+  const handleClick = (url) => {
+    window.open(url);
+  };
   return (
     <>
       <Header />
@@ -34,7 +37,16 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="curriculum">Baixe aqui meu currículo.</div>
+          <div
+            className="curriculum"
+            onClick={() =>
+              handleClick(
+                'https://drive.google.com/file/d/1HOIs7gLUl5_ur7id-WKdYQElg8UwitS4/view?usp=sharing',
+              )
+            }
+          >
+            Baixe aqui meu CV
+          </div>
         </div>
       </div>
     </>
