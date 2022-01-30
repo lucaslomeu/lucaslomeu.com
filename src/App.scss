@@ -1,18 +1,15 @@
+
+@import './assets/styles/reset.scss';
+
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  @include flexbox($flex-direction: column, $justify-content: space-between);
   height: 100%;
   width: 100vw;
 }
 
 .container {
+  @include flexbox;
+  flex-wrap: wrap;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  // padding: 0 3rem;
 }

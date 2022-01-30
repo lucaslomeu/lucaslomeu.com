@@ -1,22 +1,17 @@
+@import '../../assets/styles/reset.scss';
+
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexbox($flex-direction: column);
   margin-bottom: 3rem;
 
   .about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flexbox($flex-direction: column);
     max-width: 800px;
     padding: 1rem;
 
     .about-text {
+      @include flexbox($flex-direction: column);
       max-width: 650px;
-      display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
       gap: 2rem;
 
