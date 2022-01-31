@@ -20,7 +20,7 @@ const Info = () => {
       </div>
       <div className="info-content">
         <h1 className="title-info">
-          Olá, sou <div className="title-name">Lucas Lomeu</div>
+          Olá, sou <span className="title-name">Lucas Lomeu</span>
         </h1>
         <div className="text-info">
           Desenvolvedor Frontend e entusiasta da tecnologia.
