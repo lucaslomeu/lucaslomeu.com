@@ -11,7 +11,7 @@ const Navbar = () => {
       <div
         className={
           !isOpen &&
-          'flex items-center justify-between w-[768px] h-full mx-auto md:max-w-5xl'
+          'flex items-center justify-between max-w-[768px] w-full h-full mx-auto md:max-w-5xl'
         }
       >
         <div className='text-gray-500'>Logo</div>

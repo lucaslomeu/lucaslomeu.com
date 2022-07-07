@@ -31,8 +31,7 @@ const Projects = () => {
           <h3>SASS</h3>
         </div>
         <div className='text'>
-          Website desenvolvido durante um teste para uma empresa, tenho como
-          objetivo um simples carrinho de compras.
+          Website como objetivo de um simples carrinho de compras.
         </div>
       </div>
 
@@ -64,9 +63,8 @@ const Projects = () => {
           <h3>Styled Components</h3>
         </div>
         <div className='text'>
-          Realizado para estudo de consumo de API, utilizando ReactJS e
-          StyledComponents. O projeto foi desenvolvido para aplicação de
-          criptomoedas, como o Bitcoin, Ethereum, Litecoin, etc.
+          Estudo de consumo de API. O projeto foi desenvolvido para obter
+          informações sobre criptomoedas.
         </div>
       </div>
 
@@ -98,9 +96,8 @@ const Projects = () => {
           <h3>SASS</h3>
         </div>
         <div className='text'>
-          Foi desenvolvido um site de busca de filmes utilizando a api YTS, onde
-          é possível obter informações e até mesmo realizar o download via
-          torrent.
+          Busca de filmes utilizando a api YTS, obtendo suas informações e
+          disponibilizado download via torrent.
         </div>
       </div>
 
@@ -132,9 +129,8 @@ const Projects = () => {
           <h3>SASS</h3>
         </div>
         <div className='text'>
-          Website desenvolvido para busca de fotos, utilizando a API da Pexel,
-          sendo possível realizar o download da foto escolhida em tamanhos
-          variados.
+          Busca de fotos, utilizando a API da Pexel, sendo possível realizar o
+          download da foto escolhida em tamanhos variados.
         </div>
       </div>
 
@@ -166,7 +162,7 @@ const Projects = () => {
           <h3>SASS</h3>
         </div>
         <div className='text'>
-          Estudo de consumo de API, consumindo dados de covid-19 nos estados
+          Estudo de consumo de API, apresentando dados de covid-19 nos estados
           Brasileiros.
         </div>
       </div>
