@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div className='flex flex-col gap-y-4'>
-      <p className='text-2xl text-neutral-200 font-bold tracking-wide'>
+      <p className='text-2xl text-neutral-200 font-bold tracking-wides'>
         Olá, sou <span className='text-indigo-400'>Lucas Lomeu.</span>
       </p>
       <p className='text'>
@@ -17,7 +17,7 @@ const About = () => {
         belas aplicações que possam fazer com que o usuário tenha excelentes
         experiências web.
       </p>
-      <div className='flex gap-x-5'>
+      <div className='flex gap-x-2 md:gap-x-4'>
         <a
           href='https://github.com/lucaslomeu'
           className='btn-social'

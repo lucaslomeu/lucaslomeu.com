@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
@@ -7,17 +8,34 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='sticky top-0 w-full py-8 h-10 bg-neutral-900 z-10 backdrop-filter backdrop-blur-md bg-opacity-60'>
+    <div
+      className={`sticky top-0 w-full flex flex-col justify-start items-center bg-neutral-900 z-10 backdrop-filter backdrop-blur-md bg-opacity-60 px-14 ${
+        isOpen ? 'h-100 gap-y-4 pt-10 pb-5' : 'py-10 h-10'
+      }`}
+    >
       <div
-        className={
-          !isOpen &&
-          'flex items-center justify-between max-w-[768px] w-full h-full mx-auto md:max-w-5xl'
-        }
+        className={`flex items-center justify-between mx-auto ${
+          isOpen ? 'flex-col h-100 gap-y-4' : 'max-w-[768px] w-full h-full'
+        }`}
       >
-        <div className='text-gray-500'>Logo</div>
-        <ul className='hidden sm:flex gap-x-5'>
+        <Image
+          src='/logoWhite.png'
+          width={isOpen ? 40 : 25}
+          height={isOpen ? 40 : 25}
+          alt='Logo'
+        />
+        <ul
+          className={
+            isOpen
+              ? 'flex flex-col gap-y-2 items-center'
+              : 'hidden md:flex gap-x-5'
+          }
+        >
           <Link href='#'>
             <div className='link-menu'>Sobre</div>
+          </Link>
+          <Link href='#'>
+            <div className='link-menu'>Experiência</div>
           </Link>
           <Link href='#'>
             <div className='link-menu'>Projetos</div>
@@ -25,35 +43,17 @@ const Navbar = () => {
           <Link href='#'>
             <div className='link-menu'>Blog</div>
           </Link>
-          <Link href='#'>
-            <div className='link-menu'>Contato</div>
-          </Link>
         </ul>
-        <div onClick={() => setIsOpen(!isOpen)} className='sm:hidden'>
-          <AiOutlineMenu size={20} color='white' />
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className={isOpen ? 'absolute right-14' : 'md:hidden'}
+        >
+          {isOpen ? (
+            <AiOutlineClose size={20} color='white' />
+          ) : (
+            <AiOutlineMenu size={20} color='white' />
+          )}
         </div>
-
-        {isOpen && (
-          <div className='fixed top-0 w-full h-full bg-white'>
-            <ul>
-              <Link href='#'>
-                <div className='text-black'>Sobre</div>
-              </Link>
-              <Link href='#'>
-                <div className='text-black'>Projetos</div>
-              </Link>
-              <Link href='#'>
-                <div className='text-black'>Blog</div>
-              </Link>
-              <Link href='#'>
-                <div className='text-black'>Contato</div>
-              </Link>
-            </ul>
-            <div onClick={() => setIsOpen(!isOpen)}>
-              <AiOutlineClose size={20} color='black' />
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )

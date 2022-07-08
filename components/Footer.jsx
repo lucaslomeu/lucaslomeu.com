@@ -5,11 +5,11 @@ import { MdEmail } from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <div className='flex flex-row max-w-[768px] w-full justify-between items-center py-6'>
+    <div className='flex flex-row max-w-[768px] w-full justify-between items-center py-6 gap-x-4'>
       <div className='text-neutral-50 text-xs'>
-        © Lucas Lomeu - Todos os direitos reservados.
+        Desenvolvido por Lucas Lomeu © {new Date().getUTCFullYear()}
       </div>
-      <div className='flex flex-row items-center gap-x-6'>
+      <div className='flex flex-row items-center gap-x-4'>
         <a
           href='https://github.com/lucaslomeu'
           target='_blank'
