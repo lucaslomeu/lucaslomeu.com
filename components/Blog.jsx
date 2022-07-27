@@ -2,7 +2,12 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useRouter } from 'next/router'
 import moment from 'moment'
 
+// Context
+import { useAuth } from '../AppContext'
+
 const Blog = () => {
+  const { menuIsOpen } = useAuth()
+
   const [articles, setArticles] = useState()
 
   useEffect(() => {

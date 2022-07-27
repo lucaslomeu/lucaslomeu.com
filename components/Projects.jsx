@@ -1,7 +1,12 @@
 import React, { useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
+// Context
+import { useAuth } from '../AppContext'
+
 const Projects = () => {
+  const { menuIsOpen } = useAuth()
+
   const { asPath } = useRouter()
 
   const ref = {
