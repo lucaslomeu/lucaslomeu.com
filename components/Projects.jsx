@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 const Projects = () => {
-  // Faz aquele scroll maroto quando mudar a #hash na URL da home
   const { asPath } = useRouter()
 
   const ref = {
@@ -21,7 +20,7 @@ const Projects = () => {
       ref[urlHash].current
     ) {
       window.scrollTo({
-        top: ref[urlHash].current.offsetTop - 70,
+        top: ref[urlHash].current.offsetTop - (menuIsOpen ? 230 : 70),
         behavior: 'smooth'
       })
     }

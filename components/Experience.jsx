@@ -1,14 +1,15 @@
 import React, { useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
+// Context
+import { useAuth } from '../AppContext'
+
 const Experience = () => {
-  // Faz aquele scroll maroto quando mudar a #hash na URL da home
+  const { menuIsOpen } = useAuth()
+
   const { asPath } = useRouter()
 
   const ref = {
-    sobre: useRef(null),
-    experiencia: useRef(null),
-    projetos: useRef(null),
-    blog: useRef(null)
+    experiencia: useRef(null)
   }
 
   useEffect(() => {
@@ -20,7 +21,9 @@ const Experience = () => {
       ref[urlHash].current
     ) {
       window.scrollTo({
-        top: ref[urlHash].current.offsetTop - 70,
+        top:
+          ref[urlHash].current.offsetTop -
+          (menuIsOpen ? 230 : menuIsOpen ? 230 : 70),
         behavior: 'smooth'
       })
     }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Head from 'next/head'
 import About from '../components/About'
 import Blog from '../components/Blog'

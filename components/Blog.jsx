@@ -11,7 +11,6 @@ const Blog = () => {
       .then(res => setArticles(res))
   }, [])
 
-  // Faz aquele scroll maroto quando mudar a #hash na URL da home
   const { asPath } = useRouter()
 
   const ref = {
@@ -30,7 +29,7 @@ const Blog = () => {
       ref[urlHash].current
     ) {
       window.scrollTo({
-        top: ref[urlHash].current.offsetTop - 70,
+        top: ref[urlHash].current.offsetTop - (menuIsOpen ? 230 : 70),
         behavior: 'smooth'
       })
     }

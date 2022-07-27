@@ -3,7 +3,6 @@ import React, { useContext, useState, createContext } from 'react'
 export const AuthContext = createContext({})
 
 export const AuthProvider = ({ children }) => {
-  // Pegar o estado inicial da propria store do electron
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   return (
@@ -13,5 +12,4 @@ export const AuthProvider = ({ children }) => {
   )
 }
 
-// Custom hook to get the user from the context
 export const useAuth = () => useContext(AuthContext)
