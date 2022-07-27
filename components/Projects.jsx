@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Projects = () => {
+  // Faz aquele scroll maroto quando mudar a #hash na URL da home
+  const { asPath } = useRouter()
+
+  const ref = {
+    sobre: useRef(null),
+    experiencia: useRef(null),
+    projetos: useRef(null),
+    blog: useRef(null)
+  }
+
+  useEffect(() => {
+    const urlHash = asPath.split('#')[1]
+
+    if (
+      urlHash &&
+      typeof ref[urlHash] !== 'undefined' &&
+      ref[urlHash].current
+    ) {
+      window.scrollTo({
+        top: ref[urlHash].current.offsetTop - 70,
+        behavior: 'smooth'
+      })
+    }
+  }, [asPath])
+
   return (
-    <div className='container'>
+    <div className='container' ref={ref.projetos}>
       <h1>Projetos</h1>
       <div className='content'>
         <div className='header-container'>

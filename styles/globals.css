@@ -11,6 +11,9 @@
   body {
     @apply bg-neutral-900 tracking-wide;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 
   h1 {
     @apply text-neutral-50 text-2xl pt-10 text-indigo-400;

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
 import moment from 'moment'
 
 const Blog = () => {
@@ -10,8 +11,33 @@ const Blog = () => {
       .then(res => setArticles(res))
   }, [])
 
+  // Faz aquele scroll maroto quando mudar a #hash na URL da home
+  const { asPath } = useRouter()
+
+  const ref = {
+    sobre: useRef(null),
+    experiencia: useRef(null),
+    projetos: useRef(null),
+    blog: useRef(null)
+  }
+
+  useEffect(() => {
+    const urlHash = asPath.split('#')[1]
+
+    if (
+      urlHash &&
+      typeof ref[urlHash] !== 'undefined' &&
+      ref[urlHash].current
+    ) {
+      window.scrollTo({
+        top: ref[urlHash].current.offsetTop - 70,
+        behavior: 'smooth'
+      })
+    }
+  }, [asPath])
+
   return (
-    <div className='container'>
+    <div className='container' ref={ref.blog}>
       <h1>Blog</h1>
       {articles &&
         articles.map(item => (
