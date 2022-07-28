@@ -22,12 +22,16 @@ const Navbar = () => {
           menuIsOpen ? 'flex-col h-100 gap-y-4' : 'max-w-[768px] w-full h-full'
         }`}
       >
-        <Image
-          src='/logoWhite.png'
-          width={menuIsOpen ? 40 : 25}
-          height={menuIsOpen ? 40 : 25}
-          alt='Logo'
-        />
+        <Link href='/' smooth={true} duration={500} offset={50}>
+          <Image
+            src='/logoWhite.png'
+            width={menuIsOpen ? 40 : 25}
+            height={menuIsOpen ? 40 : 25}
+            alt='Logo'
+            style={{ cursor: 'pointer' }}
+          />
+        </Link>
+
         <ul
           className={
             menuIsOpen

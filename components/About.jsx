@@ -8,14 +8,15 @@ const About = () => {
       </p>
       <p className='text'>
         Desenvolvedor frontend, bacharel em Engenharia Civil. Atualmente atuando
-        como desenvoledor frontend na Proft, sendo responsável por todos os
-        projetos relacionados a frontend na empresa, utilizando ReactJS,
+        como desenvoledor frontend, sendo responsável por todos os projetos
+        relacionados a frontend na empresa, utilizando principalmente ReactJS,
         ReactNative e Electron.
       </p>
       <p className='text'>
         Atualmente aprimorando meus conhecimentos em ReactJS para proporcionar
         belas aplicações que possam fazer com que o usuário tenha excelentes
-        experiências web.
+        experiências web. Além de possuir conhecimento em: StyledComponents;
+        SASS; Redux; Custom Hook; Git; Photoshop e Figma.
       </p>
       <div className='flex gap-x-2 md:gap-x-4'>
         <a

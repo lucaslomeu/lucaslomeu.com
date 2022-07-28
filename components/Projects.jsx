@@ -36,6 +36,41 @@ const Projects = () => {
       <h1>Projetos</h1>
       <div className='content'>
         <div className='header-container'>
+          <h2>NewsBot</h2>
+          <div className='flex flex-row gap-x-2'>
+            <a
+              className='btn-project'
+              href='https://github.com/lucaslomeu/news-bot'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              source
+            </a>
+            <a
+              className='btn-project'
+              href='https://twitter.com/MitzNews'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              demo
+            </a>
+          </div>
+        </div>
+        <div className='subHeader-container'>
+          <h3>JavaScript</h3>
+          <h3>Axios</h3>
+          <h3>Cron</h3>
+        </div>
+        <div className='text'>
+          Bot desenvolvido para consumir API de noticias da HackerNews e fazer
+          postagem no twitter com o conteúdo da noticia. Postagem de tweets
+          programadas com Cron e alteração do banner do perfil. Em
+          desenvolvimento a parte de integração com Discord e Telegram.
+        </div>
+      </div>
+
+      <div className='content'>
+        <div className='header-container'>
           <h2>LomeuShop</h2>
           <div className='flex flex-row gap-x-2'>
             <a
